@@ -1,0 +1,6 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource>
+    <file alias="images/metakoncfg.png">images/metakoncfg.png</file>
+    <file alias="images/tornpendcfg.png">images/tornpend.png</file>
+</qresource>
+</RCC>

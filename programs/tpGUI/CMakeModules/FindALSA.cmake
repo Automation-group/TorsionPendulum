@@ -1,0 +1,20 @@
+IF(WIN32)
+ELSE(WIN32)
+
+FIND_PATH(ALSA_INCLUDE_DIR asoundlib.h
+    /usr/include/alsa
+    )
+  
+IF(NOT ALSA_INCLUDE_DIR)
+  MESSAGE(FATAL_ERROR "ALSA asoundlib.h not found")
+ENDIF(NOT ALSA_INCLUDE_DIR)
+
+FIND_LIBRARY(ALSA_LIBRARY asound
+    /usr/lib
+    )
+
+IF(NOT ALSA_LIBRARY)
+MESSAGE(FATAL_ERROR "ALSA library not found")
+ENDIF(NOT ALSA_LIBRARY)
+      
+ENDIF(WIN32)

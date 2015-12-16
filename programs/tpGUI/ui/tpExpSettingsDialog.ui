@@ -1,0 +1,194 @@
+<ui version="4.0" >
+ <class>ExpSettingsDialog</class>
+ <widget class="QDialog" name="ExpSettingsDialog" >
+  <property name="windowModality" >
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>289</width>
+    <height>256</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Настройки</string>
+  </property>
+  <layout class="QGridLayout" >
+   <item row="1" column="0" >
+    <widget class="QLabel" name="label" >
+     <property name="text" >
+      <string>Кол-во колебаний</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1" >
+    <widget class="QSpinBox" name="sbFluctCount" >
+     <property name="minimum" >
+      <number>1</number>
+     </property>
+     <property name="maximum" >
+      <number>6000</number>
+     </property>
+     <property name="singleStep" >
+      <number>5</number>
+     </property>
+     <property name="value" >
+      <number>60</number>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0" >
+    <widget class="QLabel" name="label_6" >
+     <property name="text" >
+      <string>Пропускать колебаний</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1" >
+    <widget class="QSpinBox" name="sbSkipFluctCount" >
+     <property name="minimum" >
+      <number>1</number>
+     </property>
+     <property name="maximum" >
+      <number>6000</number>
+     </property>
+     <property name="singleStep" >
+      <number>5</number>
+     </property>
+     <property name="value" >
+      <number>5</number>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0" >
+    <widget class="QLabel" name="label_2" >
+     <property name="text" >
+      <string>Мин. амплитуда</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1" >
+    <widget class="QDoubleSpinBox" name="dsbFluctMinAmpl" >
+     <property name="maximum" >
+      <double>10.000000000000000</double>
+     </property>
+     <property name="value" >
+      <double>2.000000000000000</double>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0" >
+    <widget class="QLabel" name="label_3" >
+     <property name="text" >
+      <string>Время отклонения</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="1" >
+    <widget class="QSpinBox" name="sbDeviationTime" >
+     <property name="suffix" >
+      <string>мс</string>
+     </property>
+     <property name="minimum" >
+      <number>500</number>
+     </property>
+     <property name="maximum" >
+      <number>60000</number>
+     </property>
+     <property name="singleStep" >
+      <number>500</number>
+     </property>
+     <property name="value" >
+      <number>2000</number>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0" >
+    <widget class="QLabel" name="label_4" >
+     <property name="text" >
+      <string>Скорость нагрева</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="1" >
+    <widget class="QSpinBox" name="sbHeatingSpeed" >
+     <property name="suffix" >
+      <string>°C/мин</string>
+     </property>
+     <property name="minimum" >
+      <number>-10</number>
+     </property>
+     <property name="maximum" >
+      <number>10</number>
+     </property>
+     <property name="value" >
+      <number>4</number>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="0" >
+    <widget class="QLabel" name="label_5" >
+     <property name="text" >
+      <string>Авт. подстройка нуля</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="1" >
+    <widget class="QCheckBox" name="cbZeroControl" >
+     <property name="text" >
+      <string>включить</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="0" >
+    <widget class="QPushButton" name="pbOk" >
+     <property name="text" >
+      <string>Принять</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="1" >
+    <widget class="QPushButton" name="pbCancel" >
+     <property name="text" >
+      <string>Отмена</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0" >
+    <widget class="QLabel" name="label_7" >
+     <property name="text" >
+      <string>Температура охлаждения</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1" >
+    <widget class="QSpinBox" name="sbMaxTemperature" >
+     <property name="maximum" >
+      <number>1000</number>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pbCancel</sender>
+   <signal>clicked()</signal>
+   <receiver>ExpSettingsDialog</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>224</x>
+     <y>203</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>144</x>
+     <y>112</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
